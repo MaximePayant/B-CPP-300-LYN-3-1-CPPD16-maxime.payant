@@ -85,7 +85,7 @@ void EventManager::addTime(unsigned int time)
     }
 }
 
-void EventManager::addEventList(std::list<Event> &events)
+void EventManager::addEventList(const std::list<Event> &events)
 {
     for (auto it = events.begin(); it != events.end(); ++it)
         addEvent(*it);

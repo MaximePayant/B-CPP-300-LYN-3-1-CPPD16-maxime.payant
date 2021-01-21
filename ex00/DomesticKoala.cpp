@@ -48,8 +48,8 @@ void DomesticKoala::unlearnAction(unsigned char command)
 {
     for (std::size_t ctr = 0; ctr < _methodCode.size(); ctr += 1)
         if (_methodCode[ctr] == command) {
-            _methodCode.erase(_methodCode.begin() + ctr, _methodCode.begin() + ctr);
-            _methodPtr.erase(_methodPtr.begin() + ctr, _methodPtr.begin() + ctr);
+            _methodCode.erase(_methodCode.begin() + ctr);
+            _methodPtr.erase(_methodPtr.begin() + ctr);
         }
 }
 

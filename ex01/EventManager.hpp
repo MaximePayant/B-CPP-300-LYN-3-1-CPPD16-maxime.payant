@@ -32,7 +32,7 @@ class EventManager
         void dumpEvents() const;
         void dumpEventAt(unsigned int time) const;
         void addTime(unsigned int time);
-        void addEventList(std::list<Event> &events);
+        void addEventList(const std::list<Event> &events);
 
 };
 
