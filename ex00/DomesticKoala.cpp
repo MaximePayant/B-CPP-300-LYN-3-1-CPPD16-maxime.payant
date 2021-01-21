@@ -57,9 +57,11 @@ void DomesticKoala::doAction(unsigned char command, const std::string &param)
 {
     std::size_t index = 0;
 
-    for (std::size_t ctr = 0; _methodCode[ctr] != command; ctr += 1)
-        if (ctr >= _methodCode.size())
+    while (_methodCode[index] != command) {
+        if (index >= _methodCode.size())
             return;
+        index += 1;
+    }
     (_action.*_methodPtr[index])(param);
 }
 
