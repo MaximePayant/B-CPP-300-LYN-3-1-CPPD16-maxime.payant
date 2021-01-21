@@ -20,7 +20,10 @@ _methodPtr(copy._methodPtr)
 {}
 
 DomesticKoala::~DomesticKoala()
-{}
+{
+    _methodCode.clear();
+    _methodPtr.clear();
+}
 
 DomesticKoala& DomesticKoala::operator=(const DomesticKoala& other)
 {
