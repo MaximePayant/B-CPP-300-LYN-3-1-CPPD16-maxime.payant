@@ -8,15 +8,26 @@
 #include "DomesticKoala.hpp"
 
 DomesticKoala::DomesticKoala(KoalaAction& action) :
-_action(action)
+_action(action),
+_methodCode(),
+_methodPtr()
 {}
 
 DomesticKoala::DomesticKoala(const DomesticKoala& copy) :
-_action(copy._action)
+_action(copy._action),
+_methodCode(copy._methodCode),
+_methodPtr(copy._methodPtr)
 {}
 
 DomesticKoala::~DomesticKoala()
 {}
+
+DomesticKoala& DomesticKoala::operator=(const DomesticKoala& other)
+{
+    _action = other._action;
+    _methodCode = other._methodCode;
+    _methodPtr = other._methodPtr;
+}
 
 const std::vector<DomesticKoala::methodPointer_t> *DomesticKoala::getActions() const
 {
