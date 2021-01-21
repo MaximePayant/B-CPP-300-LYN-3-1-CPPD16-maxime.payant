@@ -30,6 +30,7 @@ DomesticKoala& DomesticKoala::operator=(const DomesticKoala& other)
     _action = other._action;
     _methodCode = other._methodCode;
     _methodPtr = other._methodPtr;
+    return (*this);
 }
 
 const std::vector<DomesticKoala::methodPointer_t> *DomesticKoala::getActions() const
